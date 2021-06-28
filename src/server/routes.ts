@@ -1,4 +1,4 @@
-import { Demo2, Demo3, home } from "../app";
+import { Demo2, Demo3, home, Search } from "../app";
 import { PageRenderer } from "@xarc/react";
 import { ElectrodeFastifyInstance } from "@xarc/fastify-server";
 /**
@@ -12,8 +12,9 @@ export async function fastifyPlugin(server: ElectrodeFastifyInstance) {
     pageTitle: "xarc React App demo",
     subApps: [
       { name: home.name, ssr: true },
+      { name: Search.name, ssr: true },
       { name: Demo2.name, ssr: true },
-      { name: Demo3.name, ssr: true },
+      { name: Demo3.name, ssr: true }
     ],
     prodAssetData: {
       cdnMap: "config/assets.json",

@@ -5,6 +5,11 @@ export const home = declareSubApp({
   getModule: () => import("./home"),
 });
 
+export const Search = declareSubApp({
+  name: "search",
+  getModule: () => import("./search"),
+});
+
 export const Demo2 = declareSubApp({
   name: "demo2",
   getModule: () => import("./demo2"),
